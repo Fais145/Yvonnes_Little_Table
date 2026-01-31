@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cozy Table</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="loading" id="loading">
+  <div class="loadingCard">
+    <div class="loadingTitle">Loading...</div>
+    <div class="loadingSub">Yvonne's Little Table✨</div>
+    <div class="loadingDots" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</div>
+<div class="startScreen" id="startScreen">
+  <div class="startScene">
+
+    <!-- Cozy kitchen background -->
+    <img
+      src="Assets/StartKitchen.png"
+      class="startBg"
+      alt=""
+    />
+
+    <!-- Title -->
+    <img
+      src="Assets/Title_OurLittleTable.png"
+      class="startTitle"
+      alt="Yvonne's Little Table"
+    />
+
+    <!-- Start button -->
+    <img
+      src="Assets/StartButton.png"
+      class="startButton"
+      id="startButton"
+      alt="Start"
+    />
+
+  </div>
+</div>
+  <main class="game">
+    <section class="scene" aria-label="Cozy table scene">
+      <!-- Table background is set in CSS -->
+
+      <!-- One lit candle -->
+      <!-- <img class="prop candle" src="Assets/Candle_WithFlame.png" alt="Candle" /> -->
+
+      <!-- Items -->
+      <img class="prop ornament" src="Assets/Ornament.png" alt="Christmas ornament" />
+      <img
+        class="prop musicbox"
+        id="musicbox"
+        src="Assets/MusicBox_Off.png"
+        alt="Music box"
+      />
+      <img class="prop badminton" src="Assets/Badminton.png" alt="Badminton racket" />
+      <img class="prop cookie" src="Assets/Cookie.png" alt="Heart cookie" />
+      <div class="prop letterWrap locked" data-key="letter" aria-label="Letter (locked)">
+        <img class="letterSprite" src="Assets/Letter.png" alt="Letter" />
+
+        <!-- Lock overlay (your transparent chains+padlock asset) -->
+        <img class="letterLock" src="Assets/Padlock.png" alt="Locked letter" />
+
+        <!-- Counter that sits on the blank square plate -->
+        <div class="lockCounter" id="lockCounter">4</div>
+        </div>
+
+      <img class="prop lavender" src="Assets/Lavender.png" alt="Lavender" />
+
+
+        <!-- NOTE MODAL (hidden by default) -->
+    <div class="noteOverlay hidden" id="noteOverlay" aria-hidden="true">
+    <div class="noteWrap" role="dialog" aria-modal="true" aria-label="Note">
+        <img src="Assets/Note.png" class="noteImg" alt="Note background" />
+
+        <!-- Text goes here -->
+        <div class="noteText" id="noteText"></div>
+
+        <!-- Invisible close hotspot over the red X -->
+        <button class="noteClose" id="noteClose" aria-label="Close note"></button>
+    </div>
+    </div>
+    
+
+    </section>
+  </main>
+</body>
+<script src="script.js"></script>
+</html>
